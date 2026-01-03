@@ -3,7 +3,7 @@ import pandas as pd
 import re
 from datetime import datetime
 
-st.title("🔢 Pemisahan Data Customer dengan Invoice")
+st.title("🔢 Pemisahan Data Customer dengan Invoice by Andriy")
 st.write("Aplikasi untuk memisahkan informasi customer dan generate invoice")
 
 # Upload file
