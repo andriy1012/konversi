@@ -164,15 +164,15 @@ if uploaded_file is not None:
                 st.write(summary_df)
 
                 # Unduh CSV
-                csv = result_df.to_xlsx(index=False, encoding='utf-8-sig')
-                csv_summary = summary_df.to_xlsx(index=False, encoding='utf-8-sig')
+                xlsx = result_df.to_xlsx(index=False, encoding='utf-8-sig')
+                xlsx_summary = summary_df.to_xlsx(index=False, encoding='utf-8-sig')
 
                 col1, col2 = st.columns(2)
                 with col1:
-                    st.download_button("Unduh Detail Lengkap (xlsx)", data=csv,
+                    st.download_button("Unduh Detail Lengkap (xlsx)", data=xlsx,
                                        file_name='detail_transaksi.xlsx', mime='text/xlsx')
                 with col2:
-                    st.download_button("Unduh Ringkasan Invoice (xlsx)", data=csv_summary,
+                    st.download_button("Unduh Ringkasan Invoice (xlsx)", data=xlsx_summary,
                                        file_name='ringkasan_invoice.xlsx', mime='text/xlsx')
 
                 st.success("Proses selesai! Invoice telah digenerate berdasarkan Customer Asli.")
